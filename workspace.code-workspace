@@ -1,0 +1,49 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\연습용"
+		},
+		{
+			"path": "..\\..\\dev 백업"
+		},
+		{
+			"path": "..\\..\\xbaas 백업"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\practal"
+		},
+		{
+			"path": "..\\..\\renew 백업"
+		},
+		{
+			"path": "..\\..\\..\\bs pract\\ajax"
+		},
+		{
+			"path": "c:\\Users\\ncloud24\\Downloads\\ohtem"
+		},
+		{
+			"path": "..\\..\\ohtem 업로드용"
+		},
+		{
+			"path": "c:\\Users\\ncloud24\\Downloads\\medicalcenter-master"
+		},
+		{
+			"path": "..\\mamba-master"
+		},
+		{
+			"path": "..\\..\\20210323"
+		},
+		{
+			"path": "..\\..\\20210323_2"
+		},
+		{
+			"path": "..\\..\\20210323_3"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "practal"
+	}
+}

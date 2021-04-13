@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cmp_6area</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common_0329.css">
+    <link rel="stylesheet" href="css/cmp_sub_02.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="js/utils.js"></script>
+</head>
+
+<body>
+    <div id="wrap_opacity"></div>
+    <input type="checkbox" id="responsive-nav">
+    <label for="responsive-nav">
+        <div class="menu-wrapper">
+            <div class="hamburger-menu"></div>
+        </div>
+    </label>
+    <div id="support">
+        <div id="support_wrap">
+            <div id="support_close">
+                X
+            </div>
+            <div id="support_center">
+                <div id="support_center_top">
+                    <p>1:1 문의</p>
+                </div>
+                <div id="support_center_middle">
+                    <div id="support_middle_top">
+                        <div id="support_middle_top_1">
+                            <div id="support_combobox">
+                                <form action="">
+                                    <label for="support_combobox"></label>
+                                    <select id="support_combobox" name="support_combobox">
+                                        <option value="" disabled selected hidden>&nbsp;&nbsp;&nbsp;카테고리 선택</option>
+                                        <option value="support_combobox_01">ncloud10@ncloud24.com</option>
+                                        <option value="support_combobox_02">ncloud19@ncloud24.com</option>
+                                        <option value="support_combobox_03">ncloud23@ncloud24.com</option>
+                                        <option value="support_combobox_04">ncloud24@ncloud24.com</option>
+                                    </select>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="support_middle_top_2">
+                            <input type="text" placeholder="&nbsp;&nbsp;&nbsp;제목">
+                        </div>
+                    </div>
+                    <div id="support_middle_center">
+                        <textarea name="" id="" placeholder="질문내용"></textarea>
+                    </div>
+                    <div id="support_middle_bottom">
+                        <input type="file" name="file" id="imageFileOpenInput" accept="image/*">
+                    </div>
+                </div>
+                <div id="support_center_bottom">
+                    <button id="support_button">회신요청</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <aside>
+        <nav>
+            <div class="logo-area">
+                <img src="img/Ncloud24_logo_2021_01_w.png" alt="">
+            </div>
+            <a href="#">Platform</a>
+            <div class="nav-collapsible">
+                <input type="checkbox" id="nav-collapsible-1">
+                <label for="nav-collapsible-1">Dashboard</label>
+                <div class="wrap">
+                    <a href="#">Art</a>
+                    <a href="#">Design</a>
+                    <a href="#">Print</a>
+                    <a href="#">Web</a>
+                </div>
+            </div>
+            <div class="nav-collapsible">
+                <input type="checkbox" id="nav-collapsible-2">
+                <label for="nav-collapsible-2">Server</label>
+                <div class="wrap">
+                    <a href="#">서버목록</a>
+                    <a href="#">서버그룹관리</a>
+                </div>
+            </div>
+            <div class="nav-collapsible">
+                <input type="checkbox" id="nav-collapsible-3">
+                <label for="nav-collapsible-3">Load Balancer</label>
+                <div class="wrap">
+                    <a href="#">Art</a>
+                    <a href="#">Design</a>
+                    <a href="#">Print</a>
+                    <a href="#">Web</a>
+                </div>
+            </div>
+            <div class="nav-collapsible">
+                <input type="checkbox" id="nav-collapsible-4">
+                <label for="nav-collapsible-4">Network</label>
+                <div class="wrap">
+                    <a href="#">Art</a>
+                    <a href="#">Design</a>
+                    <a href="#">Print</a>
+                    <a href="#">Web</a>
+                </div>
+            </div>
+            <a href="#" class="support">1:1 문의</a>
+        </nav>
+    </aside>
+    <main>
+        <div id="wrap">
+            <h1 class="july">
+                &nbsp;
+            </h1>
+            <div id="top_area">
+                <div id="top_blank"></div>
+                <div id="top_title">
+                    <p>클라우드</p>
+                    <p>계정</p>
+                </div>
+                <div id="top_btn">
+                    <div id="btn_aws">
+                        <img src="img/aws_on.png" alt="">
+                    </div>
+                    <div id="btn_kt">
+                        <img src="img/kt_off.png" alt="">
+                    </div>
+                    <div id="btn_naver">
+                        <img src="img/naver_off.png" alt="">
+                    </div>
+                    <div id="btn_toast">
+                        <img src="img/toast_off.png" alt="">
+                    </div>
+                    <div id="btn_all">
+                        <div id="combobox1">
+                            <form action="">
+                                <label for="combobox1"></label>
+                                <select id="combobox1" name="combobox1">
+                                    <option value="" disabled selected hidden>계정 전체보기</option>
+                                    <option value="combobox1_01">ncloud10@cloud24.com</option>
+                                    <option value="combobox1_02">ncloud19@cloud24.com</option>
+                                    <option value="combobox1_03">ncloud23@cloud24.com</option>
+                                    <option value="combobox1_04">ncloud24@cloud24.com</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="main_area">
+                <div id="main_button">
+                    <div id="button_left">
+                        <div id="button_left_01">
+                            <p>서버목록</p>
+                        </div>
+                        <div id="button_left_02">
+                            <p>서버그룹관리</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="main_center">
+                    <div id="main_center1">
+                        <div id="chart">
+                        </div>
+                    </div>
+                    <div id="main_center2">
+                        
+                    </div>
+                    <div id="main_center3">
+
+                    </div>
+                    <div id="main_center4">
+
+                    </div>
+                    <div id="main_center5">
+
+                    </div>
+                    <div id="main_center6">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        $(document).ready(function () {
+
+            $('.menu-wrapper').on('click', function () {
+                $('.hamburger-menu').toggleClass('animate');
+            })
+
+            $('.support').click(function () {
+                $('#support').addClass('on');
+            })
+            $('#support_close').click(function () {
+                $('#support').removeClass('on');
+            })
+
+            var options = {
+  chart: {
+    height: 280,
+    type: "area"
+  },
+  dataLabels: {
+    enabled: false
+  },
+  series: [
+    {
+      name: "Series 1",
+      data: [45, 52, 38, 45, 19, 23, 2]
+    }
+  ],
+  fill: {
+    type: "gradient",
+    gradient: {
+      shadeIntensity: 1,
+      opacityFrom: 0.7,
+      opacityTo: 0.9,
+      stops: [0, 90, 100]
+    }
+  },
+  xaxis: {
+    categories: [
+      "01 Jan",
+      "02 Jan",
+      "03 Jan",
+      "04 Jan",
+      "05 Jan",
+      "06 Jan",
+      "07 Jan"
+    ]
+  }
+};
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+chart.render();
+
+
+        });
+    </script>
+</body>
+
+</html>
