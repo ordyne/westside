@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cmp_login</title>
+    <link rel="stylesheet" href="css/cmp_login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+    <aside>
+        <div id="logo">
+            <img src="img/Ncloud24_logo_2021_01_w.png" alt="">
+        </div>
+        <div class="login-page">
+            <div class="form">
+                <p>LOGIN</p>
+                <div id="login_line"></div>
+              <form class="register-form">
+                <input type="text" placeholder="name"/>
+                <input type="password" placeholder="password"/>
+                <input type="text" placeholder="email address"/>
+                <button>create</button>
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+              </form>
+              <form class="login-form">
+                <input type="text" placeholder="USER ID"/>
+                <input type="password" placeholder="************"/>
+                <div id="login_menu">
+                    <a href="#">ID/비밀번호 찾기</a>
+                    <div id="login_email">
+                        <input type="checkbox"><p>이메일 저장</p>
+                    </div>
+                </div>
+                <button>Sign In</button>
+                <p class="message"><a href="#">서비스 이용가이드</a>&nbsp;l&nbsp;<a href="#">문의하기</a>&nbsp;|&nbsp;<a href="#">OTP 이용방법</a></p>
+              </form>
+            </div>
+          </div>
+    </aside>
+    <main>
+
+    </main>
+    <script>
+        $('.message a').click(function(){
+        $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+    });
+    </script>
+</body>
+</html>

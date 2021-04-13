@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cmp_subpage</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <!-- <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/commons.css">
+    <link rel="stylesheet" href="css/subpage.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/utils.js"></script>
+    <style>
+       :root {
+            --main-color: #0c83c4;
+        }
+
+        #wrap #top_area #top_btn #btn_aws {
+            border: 1px solid #ccc;
+        }
+
+        #wrap #top_area #top_btn #btn_toast {
+            border: 3px solid var(--main-color);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap_opacity"></div>
+    <div id="wrap_opacity_support"></div>
+    <input type="checkbox" id="responsive-nav">
+    <label for="responsive-nav">
+        <div class="menu-wrapper">
+            <div class="hamburger-menu"></div>
+        </div>
+    </label>
+    <div id="support">
+        <div id="support_wrap">
+            <div id="support_close">
+                X
+            </div>
+            <div id="support_center">
+                <div id="support_center_top">
+                    <p>1:1 문의</p>
+                </div>
+                <div id="support_center_middle">
+                    <div id="support_middle_top">
+                        <div id="support_middle_top_1">
+                            <div id="support_combobox">
+                                <form action="">
+                                    <label for="support_combobox"></label>
+                                    <select id="support_combobox" name="support_combobox">
+                                        <option value="" disabled selected hidden>&nbsp;&nbsp;&nbsp;카테고리 선택</option>
+                                        <option value="support_combobox_01">ncloud10@ncloud24.com</option>
+                                        <option value="support_combobox_02">ncloud19@ncloud24.com</option>
+                                        <option value="support_combobox_03">ncloud23@ncloud24.com</option>
+                                        <option value="support_combobox_04">ncloud24@ncloud24.com</option>
+                                    </select>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="support_middle_top_2">
+                            <input type="text" placeholder="제목">
+                        </div>
+                    </div>
+                    <div id="support_middle_center">
+                        <textarea name="" id="" placeholder="질문내용"></textarea>
+                    </div>
+                    <div id="support_middle_bottom">
+                        <input type="file" name="file" id="imageFileOpenInput" accept="image/*">
+                    </div>
+                </div>
+                <div id="support_center_bottom">
+                    <button id="support_button">회신요청</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <aside>
+        <nav>
+            <div class="logo-area">
+                <img src="img/Ncloud24_logo_2021_01_w.png" alt="ncloud24 로고 white">
+            </div>
+            <a href="#">Platform</a>
+            <div class="nav-collapsible">
+                <input type="checkbox" id="nav-collapsible-1">
+                <label for="nav-collapsible-1">Dashboard</label>
+                <div class="wrap">
+                    <a href="#">Art</a>
+                    <a href="#">Design</a>
+                    <a href="#">Print</a>
+                    <a href="#">Web</a>
+                </div>
+            </div>
+            <div class="nav-collapsible">
+                <input type="checkbox" id="nav-collapsible-2">
+                <label for="nav-collapsible-2">Server</label>
+                <div class="wrap">
+                    <a href="#">서버목록</a>
+                    <a href="#">서버그룹관리</a>
+                </div>
+            </div>
+            <div class="nav-collapsible">
+                <input type="checkbox" id="nav-collapsible-3">
+                <label for="nav-collapsible-3">Load Balancer</label>
+                <div class="wrap">
+                    <a href="#">Art</a>
+                    <a href="#">Design</a>
+                    <a href="#">Print</a>
+                    <a href="#">Web</a>
+                </div>
+            </div>
+            <div class="nav-collapsible">
+                <input type="checkbox" id="nav-collapsible-4">
+                <label for="nav-collapsible-4">Network</label>
+                <div class="wrap">
+                    <a href="#">Art</a>
+                    <a href="#">Design</a>
+                    <a href="#">Print</a>
+                    <a href="#">Web</a>
+                </div>
+            </div>
+            <a href="#" class="support">1:1 문의</a>
+        </nav>
+    </aside>
+    <main>
+        <div id="wrap">
+            <h1 class="july">
+                &nbsp;
+            </h1>
+            <div id="top_area">
+                <div id="top_blank"></div>
+                <div id="top_title">
+                    <p>클라우드</p>
+                    <p>계정</p>
+                </div>
+                <div id="top_btn">
+                    <div id="btn_aws" onclick="location.href='subpage.html'" style="cursor:pointer;">
+                        <img src="img/aws_off.png" alt="AWS 로고 off">
+                    </div>
+                    <div id="btn_kt" onclick="location.href='subpage_kt.html'" style="cursor:pointer;">
+                        <img src="img/kt_off.png" alt="KT 로고 off">
+                    </div>
+                    <div id="btn_naver" onclick="location.href='subpage_naver.html'" style="cursor:pointer;">
+                        <img src="img/naver_off.png" alt="NAVER 로고 off">
+                    </div>
+                    <div id="btn_toast" onclick="location.href='subpage_toast.html'" style="cursor:pointer;">
+                        <img src="img/toast_on.png" alt="TOAST 로고 on">
+                    </div>
+                    <div id="btn_all">
+                        <div id="combobox1">
+                            <form action="">
+                                <label for="combobox1"></label>
+                                <select id="combobox1" name="combobox1">
+                                    <option value="" disabled selected hidden>계정 전체보기</option>
+                                    <option value="combobox1_01">ncloud10@cloud24.com</option>
+                                    <option value="combobox1_02">ncloud19@cloud24.com</option>
+                                    <option value="combobox1_03">ncloud23@cloud24.com</option>
+                                    <option value="combobox1_04">ncloud24@cloud24.com</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="main_area">
+                <div id="modal">
+                    <div id="modal_wrap">
+                        <div id="modal_top">
+                            <ul>
+                                <li id="modal_tab_1">상세정보</li>
+                                <li id="modal_tab_2">서버그룹목록</li>
+                                <li id="modal_tab_3">모니터링</li>
+                                <li id="modal_tab_4">이벤트로그</li>
+                            </ul>
+                            <div id="modal_close">
+                                X
+                            </div>
+                        </div>
+                        <div id="modal_center">
+                            <div id="modal_center_1" class="modal_centers">
+                                <table>
+                                    <tr>
+                                        <td>서버명</td>
+                                        <td>4science-dev</td>
+                                        <td>태그</td>
+                                        <td>4science-dev</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IP</td>
+                                        <td>211.253.27.171:10050</td>
+                                        <td>소프트웨어</td>
+                                        <td>211.253.27.171:10050</td>
+                                    </tr>
+                                    <tr>
+                                        <td>종류</td>
+                                        <td>4science-dev</td>
+                                        <td>랙번호</td>
+                                        <td>4science-dev</td>
+                                    </tr>
+                                    <tr>
+                                        <td>OS</td>
+                                        <td>211.253.27.171:10050</td>
+                                        <td>MAC주소 A</td>
+                                        <td>211.253.27.171:10050</td>
+                                    </tr>
+                                    <tr>
+                                        <td>벤더사</td>
+                                        <td>4science-dev</td>
+                                        <td>MAC주소 B</td>
+                                        <td>4science-dev</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="modal_center_2" class="modal_centers">2탭</div>
+                            <div id="modal_center_3" class="modal_centers">3탭</div>
+                            <div id="modal_center_4" class="modal_centers">4탭</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tablet_modal">
+                    <div id="tablet_modal_wrap">
+                        <div id="tablet_modal_top">
+                            <ul>
+                                <li id="tablet_modal_tab_1">상세정보</li>
+                            </ul>
+                            <div id="tablet_modal_close">
+                                X
+                            </div>
+                        </div>
+                        <div id="tablet_modal_center">
+                            <table>
+                                <tr>
+                                    <td>서버명</td>
+                                    <td>4science-dev</td>
+                                    <td>태그</td>
+                                    <td>4science-dev</td>
+                                </tr>
+                                <tr>
+                                    <td>IP</td>
+                                    <td>211.253.27.171:10050</td>
+                                    <td>소프트웨어</td>
+                                    <td>211.253.27.171:10050</td>
+                                </tr>
+                                <tr>
+                                    <td>종류</td>
+                                    <td>4science-dev</td>
+                                    <td>랙번호</td>
+                                    <td>4science-dev</td>
+                                </tr>
+                                <tr>
+                                    <td>OS</td>
+                                    <td>211.253.27.171:10050</td>
+                                    <td>MAC주소 A</td>
+                                    <td>211.253.27.171:10050</td>
+                                </tr>
+                                <tr>
+                                    <td>벤더사</td>
+                                    <td>4science-dev</td>
+                                    <td>MAC주소 B</td>
+                                    <td>4science-dev</td>
+                                </tr>
+                                <tr>
+                                    <td>URL</td>
+                                    <td>211.253.27.171:10050</td>
+                                    <td>하드웨어 구입일</td>
+                                    <td>211.253.27.171:10050</td>
+                                </tr>
+                                <tr>
+                                    <td>사양</td>
+                                    <td>4science-dev</td>
+                                    <td>하드웨어 설치일</td>
+                                    <td>4science-dev</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="mobile_modal">
+                    <div id="mobile_modal_wrap">
+                        <div id="mobile_modal_top">
+                            <ul>
+                                <li id="mobile_modal_tab_1">상세정보</li>
+                            </ul>
+                            <div id="mobile_modal_close">
+                                X
+                            </div>
+                        </div>
+                        <div id="mobile_modal_center">
+                            <table>
+                                <tr>
+                                    <td>서버그룹목록</td>
+                                    <td>→</td>
+                                </tr>
+                                <tr>
+                                    <td>서버명</td>
+                                    <td>4science-dev</td>
+                                </tr>
+                                <tr>
+                                    <td>IP</td>
+                                    <td>211.253.27.171:10050</td>
+                                </tr>
+                                <tr>
+                                    <td>종류</td>
+                                    <td>4science-dev</td>
+                                </tr>
+                                <tr>
+                                    <td>OS</td>
+                                    <td>211.253.27.171:10050</td>
+                                </tr>
+                                <tr>
+                                    <td>벤더사</td>
+                                    <td>4science-dev</td>
+                                </tr>
+                                <tr>
+                                    <td>URL</td>
+                                    <td>211.253.27.171:10050</td>
+                                </tr>
+                                <tr>
+                                    <td>사양</td>
+                                    <td>4science-dev</td>
+                                </tr>
+                                <tr>
+                                    <td>모델명</td>
+                                    <td>211.253.27.171:10050</td>
+                                </tr>
+                                <tr>
+                                    <td>태그</td>
+                                    <td>4science-dev</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="main_button">
+                    <div id="button_left">
+                        <div id="button_left_01">
+                            <p>서버목록</p>
+                        </div>
+                        <div id="button_left_02">
+                            <p>서버그룹관리</p>
+                        </div>
+                    </div>
+                    <div id="button_center">
+                        <div id="button_center_01">
+                            <p>START</p>
+                        </div>
+                        <div id="button_center_02">
+                            <p>PAUSE</p>
+                        </div>
+                        <div id="button_center_03">
+                            <p>DELETE</p>
+                        </div>
+                    </div>
+                    <div id="button_right">
+                        <div class="searchBox">
+
+                            <input class="searchInput"type="text" name="" placeholder="Search">
+                            <button class="searchButton" href="#">
+                                <i class="material-icons">
+                                    <img id="search_img1" src="img/search_icon_white.png" alt="">
+                                    <img id="search_img2" src="img/search_icon_black.png" alt="">
+                                </i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="main_center">
+                    <div id="main_tableWrap">
+                        <table>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" name="all" class="ck-all">
+                                </th>
+                                <th>OS</th>
+                                <th>서버명</th>
+                                <th>그룹명</th>
+                                <th>IP</th>
+                                <th>모니터링</th>
+                                <th>그래프</th>
+                                <th>웹</th>
+                                <th>DB</th>
+                                <th>로그</th>
+                                <th>데이터수집</th>
+                                <th>통신상태</th>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_1" class="ck">
+                                </td>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>53</td>
+                                <td>53</td>
+                                <td>25</td>
+                                <td>2</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" checked />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_red">&nbsp;●&nbsp;&nbsp; Error</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_2" class="ck">
+                                </td>
+                                <td>Windows</td>
+                                <td>5science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>56</td>
+                                <td>56</td>
+                                <td>28</td>
+                                <td>0</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" checked />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_orange">&nbsp;●&nbsp;&nbsp; Warning</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_3" class="ck">
+                                </td>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>53</td>
+                                <td>53</td>
+                                <td>25</td>
+                                <td>2</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_red">&nbsp;●&nbsp;&nbsp; Error</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_4" class="ck">
+                                </td>
+                                <td>Windows</td>
+                                <td>5science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>56</td>
+                                <td>56</td>
+                                <td>28</td>
+                                <td>0</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" checked />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_green">&nbsp; ●&nbsp;&nbsp; Ok</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_5" class="ck">
+                                </td>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>53</td>
+                                <td>53</td>
+                                <td>25</td>
+                                <td>2</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_red">&nbsp;●&nbsp;&nbsp; Error</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_6" class="ck">
+                                </td>
+                                <td>Windows</td>
+                                <td>5science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>56</td>
+                                <td>56</td>
+                                <td>28</td>
+                                <td>0</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" checked />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_green">&nbsp; ●&nbsp;&nbsp; Ok</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_7" class="ck">
+                                </td>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>53</td>
+                                <td>53</td>
+                                <td>25</td>
+                                <td>2</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_red">&nbsp;●&nbsp;&nbsp; Error</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_8" class="ck">
+                                </td>
+                                <td>Windows</td>
+                                <td>5science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>56</td>
+                                <td>56</td>
+                                <td>28</td>
+                                <td>0</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" checked />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_orange">&nbsp;●&nbsp;&nbsp; Warning</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_9" class="ck">
+                                </td>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>53</td>
+                                <td>53</td>
+                                <td>25</td>
+                                <td>2</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_red">&nbsp;●&nbsp;&nbsp; Error</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_10" class="ck">
+                                </td>
+                                <td>Windows</td>
+                                <td>5science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>56</td>
+                                <td>56</td>
+                                <td>28</td>
+                                <td>0</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" checked />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_green">&nbsp; ●&nbsp;&nbsp; Ok</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_11" class="ck">
+                                </td>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>53</td>
+                                <td>53</td>
+                                <td>25</td>
+                                <td>2</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_orange">&nbsp;●&nbsp;&nbsp; Warning</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_12" class="ck">
+                                </td>
+                                <td>Windows</td>
+                                <td>5science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>56</td>
+                                <td>56</td>
+                                <td>28</td>
+                                <td>0</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" checked />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_green">&nbsp; ●&nbsp;&nbsp; Ok</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_13" class="ck">
+                                </td>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>53</td>
+                                <td>53</td>
+                                <td>25</td>
+                                <td>2</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_red">&nbsp;●&nbsp;&nbsp; Error</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_14" class="ck">
+                                </td>
+                                <td>Windows</td>
+                                <td>5science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>56</td>
+                                <td>56</td>
+                                <td>28</td>
+                                <td>0</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" checked />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_orange">&nbsp;●&nbsp;&nbsp; Warning</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_15" class="ck">
+                                </td>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>53</td>
+                                <td>53</td>
+                                <td>25</td>
+                                <td>2</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_orange">&nbsp;●&nbsp;&nbsp; Warning</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_16" class="ck">
+                                </td>
+                                <td>Windows</td>
+                                <td>5science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>56</td>
+                                <td>56</td>
+                                <td>28</td>
+                                <td>0</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" checked />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_green">&nbsp; ●&nbsp;&nbsp; Ok</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_17" class="ck">
+                                </td>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>53</td>
+                                <td>53</td>
+                                <td>25</td>
+                                <td>2</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_red">&nbsp;●&nbsp;&nbsp; Error</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_18" class="ck">
+                                </td>
+                                <td>Windows</td>
+                                <td>5science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>56</td>
+                                <td>56</td>
+                                <td>28</td>
+                                <td>0</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" checked />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_green">&nbsp; ●&nbsp;&nbsp; Ok</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_19" class="ck">
+                                </td>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>53</td>
+                                <td>53</td>
+                                <td>25</td>
+                                <td>2</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_orange">&nbsp;●&nbsp;&nbsp; Warning</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_20" class="ck">
+                                </td>
+                                <td>Windows</td>
+                                <td>5science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>56</td>
+                                <td>56</td>
+                                <td>28</td>
+                                <td>0</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" checked />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_green">&nbsp; ●&nbsp;&nbsp; Ok</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_21" class="ck">
+                                </td>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>53</td>
+                                <td>53</td>
+                                <td>25</td>
+                                <td>2</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_red">&nbsp;●&nbsp;&nbsp; Error</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_22" class="ck">
+                                </td>
+                                <td>Windows</td>
+                                <td>5science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>56</td>
+                                <td>56</td>
+                                <td>28</td>
+                                <td>0</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" checked />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_orange">&nbsp;●&nbsp;&nbsp; Warning</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_23" class="ck">
+                                </td>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>53</td>
+                                <td>53</td>
+                                <td>25</td>
+                                <td>2</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_orange">&nbsp;●&nbsp;&nbsp; Warning</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="notclick">
+                                    <input type="checkbox" name="check_24" class="ck">
+                                </td>
+                                <td>Windows</td>
+                                <td>5science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>56</td>
+                                <td>56</td>
+                                <td>28</td>
+                                <td>0</td>
+                                <td class="toggle notclick">
+                                    <label><input type="checkbox" class="ios-switch green tinyswitch" checked />
+                                        <div>
+                                            <div></div>
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    <p class="color_green">&nbsp; ●&nbsp;&nbsp; Ok</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="tablet_main_tableWrap">
+                        <table>
+                            <tr>
+                                <th>OS</th>
+                                <th>서버명</th>
+                                <th>그룹명</th>
+                                <th>IP</th>
+                                <th>모니터링</th>
+                                <th>DB</th>
+                            </tr>
+                            <tr>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Windows</td>
+                                <td>webhosting-WIN</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Windows</td>
+                                <td>webhosting-WIN</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Windows</td>
+                                <td>webhosting-WIN</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Windows</td>
+                                <td>webhosting-WIN</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Windows</td>
+                                <td>webhosting-WIN</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Windows</td>
+                                <td>webhosting-WIN</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Windows</td>
+                                <td>webhosting-WIN</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Windows</td>
+                                <td>webhosting-WIN</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>Linux</td>
+                                <td>4science-dev</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Windows</td>
+                                <td>webhosting-WIN</td>
+                                <td>WellData System</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>30</td>
+                                <td>30</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="mobile_main_tableWrap">
+                        <p>서버목록</p>
+                        <table>
+                            <tr>
+                                <th>서버명</th>
+                                <th>IP</th>
+                                <th>통신상태</th>
+                            </tr>
+                            <tr>
+                                <td>4science-dev</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>
+                                    <p class="color_red">&nbsp;●&nbsp;&nbsp;Error</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5science-dev</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>
+                                    <p class="color_orange">&nbsp;●&nbsp;&nbsp;Warning</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6science-dev</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>
+                                    <p class="color_green">&nbsp;●&nbsp;&nbsp;Ok</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4science-dev</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>
+                                    <p class="color_red">&nbsp;●&nbsp;&nbsp;Error</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5science-dev</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>
+                                    <p class="color_orange">&nbsp;●&nbsp;&nbsp;Warning</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6science-dev</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>
+                                    <p class="color_green">&nbsp;●&nbsp;&nbsp;Ok</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4science-dev</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>
+                                    <p class="color_red">&nbsp;●&nbsp;&nbsp;Error</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5science-dev</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>
+                                    <p class="color_orange">&nbsp;●&nbsp;&nbsp;Warning</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6science-dev</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>
+                                    <p class="color_green">&nbsp;●&nbsp;&nbsp;Ok</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4science-dev</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>
+                                    <p class="color_red">&nbsp;●&nbsp;&nbsp;Error</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5science-dev</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>
+                                    <p class="color_orange">&nbsp;●&nbsp;&nbsp;Warning</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6science-dev</td>
+                                <td>211.253.27.171:10050</td>
+                                <td>
+                                    <p class="color_green">&nbsp;●&nbsp;&nbsp;Ok</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        $(document).ready(function () {
+            /*th의 checkbox 클릭 시 모든 checkbox 체크*/
+            $('.ck-all').click(function () {
+                $('.ck').prop('checked', this.checked);
+            });
+            document.addEventListener("touchstart", function () {}, true);
+
+            /*tr 클릭 시 그 행의 checkbox 체크. 체크박스를 눌렀을 시 오류있음.*/
+            // $('#main_center table tr').click(function(){
+            //     var checkbox = $(this).find('td:first-child :checkbox');
+            //     checkbox.attr('checked', !checkbox.is(':checked'));
+            // });
+
+            /*tr 클릭 시 그 행의 checkbox 체크. all을 체크 해제 시 오류있음*/
+            //     $('#main_center table tr').click(function(event){
+            // 	if(event.target.nodeName.toLowerCase() == 'td') {
+            // 		var checkbox = $(this).find('td:first-child :checkbox');
+            // 		checkbox.attr('checked', !checkbox.is(':checked'));
+            // 	}
+            // });
+
+            $('#modal').hide();
+            $('#tablet_modal').hide();
+            $('#mobile_modal').hide();
+            $('#main_center #main_tableWrap table tr td').not('.notclick').click(function () {
+                $('#modal').show();
+                $('#wrap_opacity').addClass('on');
+            })
+
+            $('#modal #modal_wrap #modal_top #modal_close').click(function () {
+                $('#modal').hide();
+                $('#wrap_opacity').removeClass('on');
+            })
+            $('#tablet_main_tableWrap table tr td').not('.notclick').click(function () {
+                $('#tablet_modal').show();
+                $('#wrap_opacity').addClass('on');
+            })
+
+            $('#tablet_modal_wrap #tablet_modal_top #tablet_modal_close').click(function () {
+                $('#tablet_modal').hide();
+                $('#wrap_opacity').removeClass('on');
+            })
+
+            $('#mobile_main_tableWrap table tr td').not('.notclick').click(function () {
+                $('#mobile_modal').show();
+                $('#wrap_opacity').addClass('on');
+            })
+
+            $('#mobile_modal_wrap #mobile_modal_top #mobile_modal_close').click(function () {
+                $('#mobile_modal').hide();
+                $('#wrap_opacity').removeClass('on');
+            })
+
+            $('#modal_center_2').hide();
+            $('#modal_center_3').hide();
+            $('#modal_center_4').hide();
+
+            $('#modal_tab_1').click(function () {
+                $('.modal_centers').hide(),
+                    $('#modal_center_1').show();
+            });
+
+            $('#modal_tab_2').click(function () {
+                $('.modal_centers').hide(),
+                    $('#modal_center_2').show();
+            });
+
+            $('#modal_tab_3').click(function () {
+                $('.modal_centers').hide(),
+                    $('#modal_center_3').show();
+            });
+
+            $('#modal_tab_4').click(function () {
+                $('.modal_centers').hide(),
+                    $('#modal_center_4').show();
+            });
+
+            // $("#modal").draggable({
+            //      handle: "#modal_top"
+            // }); 적용안됨
+
+            $('.menu-wrapper').on('click', function () {
+                $('.hamburger-menu').toggleClass('animate');
+            })
+
+            $('.menu-wrapper').on('click', function () {
+                $('#wrap_opacity').toggleClass('on');
+            });
+
+            $('.support').click(function () {
+                $('#support').addClass('on');
+                $('#wrap_opacity_support').addClass('on');
+            })
+            $('#support_close').click(function () {
+                $('#support').removeClass('on');
+                $('#wrap_opacity_support').removeClass('on');
+            })
+
+            $('.searchBox').mouseover(function(){
+                $('.searchButton #search_img2').show();
+                $('.searchButton #search_img1').hide();
+            });
+
+            $('.searchBox').mouseout(function(){
+                $('.searchButton #search_img2').hide();
+                $('.searchButton #search_img1').show();
+            });
+
+            // $('searchBox').hover(function(){
+            //     $('.searchButton #search_img2').show();
+            //     $('.searchButton #search_img1').hide();
+            // },function(){
+            //     $('.searchButton #search_img2').hide();
+            //     $('.searchButton #search_img1').show();
+            // })
+
+        });
+    </script>
+</body>
+
+</html>

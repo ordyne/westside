@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="ScreenOrientation" content="autoRotate:disabled"> -->
+    <title>dashboard_toast</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.1/assets/owl.carousel.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="css/commons.css">
+    <link rel="stylesheet" href="css/cmp_index.css">
+    <script src='js/jquery-1.10.2.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.1/owl.carousel.min.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <style>
+        :root {
+            --main-color: #0c83c4;
+        }
+
+        #wrap #top_area #top_btn #btn_aws {
+            border: 1px solid #ccc;
+        }
+
+        #wrap #top_area #top_btn #btn_toast {
+            border: 3px solid var(--main-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap_opacity"></div>
+    <div id="wrap_opacity_support"></div>
+    <input type="checkbox" id="responsive-nav">
+    <label for="responsive-nav">
+        <div class="menu-wrapper">
+            <div class="hamburger-menu"></div>
+        </div>
+    </label>
+    <div id="support">
+        <div id="support_wrap">
+            <div id="support_close">
+                X
+            </div>
+            <div id="support_center">
+                <div id="support_center_top">
+                    <p>1:1 문의</p>
+                </div>
+                <div id="support_center_middle">
+                    <div id="support_middle_top">
+                        <div id="support_middle_top_1">
+                            <div id="support_combobox">
+                                <form action="">
+                                    <label for="support_combobox"></label>
+                                    <select id="support_combobox" name="support_combobox">
+                                        <option value="" disabled selected hidden>&nbsp;&nbsp;&nbsp;카테고리 선택</option>
+                                        <option value="support_combobox_01">ncloud10@ncloud24.com</option>
+                                        <option value="support_combobox_02">ncloud19@ncloud24.com</option>
+                                        <option value="support_combobox_03">ncloud23@ncloud24.com</option>
+                                        <option value="support_combobox_04">ncloud24@ncloud24.com</option>
+                                        <option value="support_combobox_05">ncloud25@ncloud24.com</option>
+                                    </select>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="support_middle_top_2">
+                            <input type="text" placeholder="&nbsp;&nbsp;&nbsp;제목">
+                        </div>
+                    </div>
+                    <div id="support_middle_center">
+                        <textarea name="" id="" placeholder="질문내용"></textarea>
+                    </div>
+                    <div id="support_middle_bottom">
+                        <input type="file" name="file" id="imageFileOpenInput" accept="image/*">
+                    </div>
+                </div>
+                <div id="support_center_bottom">
+                    <button id="support_button">회신요청</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <aside>
+        <nav>
+            <div class="logo-area">
+                <img src="img/Ncloud24_logo_2021_01_w.png" alt="ncloud24">
+            </div>
+            <a href="#">Platform</a>
+            <div class="nav-collapsible">
+                <input type="checkbox" id="nav-collapsible-1">
+                <label for="nav-collapsible-1">Dashboard</label>
+                <div class="wrap">
+                    <a href="#">Art</a>
+                    <a href="#">Design</a>
+                    <a href="#">Print</a>
+                    <a href="#">Web</a>
+                </div>
+            </div>
+            <div class="nav-collapsible">
+                <input type="checkbox" id="nav-collapsible-2">
+                <label for="nav-collapsible-2">Server</label>
+                <div class="wrap">
+                    <a href="#">서버목록</a>
+                    <a href="#">서버그룹관리</a>
+                </div>
+            </div>
+            <div class="nav-collapsible">
+                <input type="checkbox" id="nav-collapsible-3">
+                <label for="nav-collapsible-3">Load Balancer</label>
+                <div class="wrap">
+                    <a href="#">Art</a>
+                    <a href="#">Design</a>
+                    <a href="#">Print</a>
+                    <a href="#">Web</a>
+                </div>
+            </div>
+            <div class="nav-collapsible">
+                <input type="checkbox" id="nav-collapsible-4">
+                <label for="nav-collapsible-4">Network</label>
+                <div class="wrap">
+                    <a href="#">Art</a>
+                    <a href="#">Design</a>
+                    <a href="#">Print</a>
+                    <a href="#">Web</a>
+                </div>
+            </div>
+            <a href="#" class="support">1:1 문의</a>
+        </nav>
+    </aside>
+    <main>
+        <div id="wrap">
+            <h1 class="july">
+                &nbsp;
+            </h1>
+            <div id="top_area">
+                <div id="top_title">
+                    <p>클라우드</p>
+                    <p>계정</p>
+                </div>
+                <div id="top_btn">
+                    <div id="btn_aws" onclick="location.href='dashboard.html'" style="cursor:pointer;">
+                        <img src="img/aws_off.png" alt="AWS">
+                    </div>
+                    <div id="btn_kt" onclick="location.href='dashboard_kt.html'" style="cursor:pointer;">
+                        <img src="img/kt_off.png" alt="KT">
+                    </div>
+                    <div id="btn_naver" onclick="location.href='dashboard_naver.html'" style="cursor:pointer;">
+                        <img src="img/naver_off.png" alt="NAVER">
+                    </div>
+                    <div id="btn_toast" onclick="location.href='dashboard_toast.html'" style="cursor:pointer;">
+                        <img src="img/toast_on.png" alt="TOAST">
+                    </div>
+                    <div id="btn_all">
+                        <div id="combobox1">
+                            <form action="">
+                                <label for="combobox1"></label>
+                                <select id="combobox1" name="combobox1">
+                                    <option value="" disabled selected hidden>계정 전체보기</option>
+                                    <option value="combobox1_01">ncloud10@ncloud24.com</option>
+                                    <option value="combobox1_02">ncloud19@ncloud24.com</option>
+                                    <option value="combobox1_03">ncloud23@ncloud24.com</option>
+                                    <option value="combobox1_04">ncloud24@ncloud24.com</option>
+                                    <option value="combobox1_05">ncloud25@ncloud24.com</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="grid_wrap">
+                <div id="grid_left">
+                    <div id="grid1">
+                        <div id="box1">
+                            <div id="box1_1">
+                                <p>전체 자원 <img src="img/cmp_point.png" alt=""></p>
+                            </div>
+                            <div id="box1_2">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <img src="img/icon_toast/icon_58.png" alt="">
+                                        </td>
+                                        <td>
+                                            <span>Server<p class="numbers">25</p></span>
+                                        </td>
+                                        <td>
+                                            <img src="img/icon_toast/icon_59.png" alt="">
+                                        </td>
+                                        <td>
+                                            <span>NAS<p class="numbers">0</p></span>
+                                        </td>
+                                        <td>
+                                            <img src="img/icon_toast/icon_60.png" alt="">
+                                        </td>
+                                        <td>
+                                            <span>CDN<p class="numbers">0</p></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="img/icon_toast/icon_61.png" alt="">
+                                        </td>
+                                        <td>
+                                            <span>Load<br>Balancer<p class="numbers">25</p></span>
+                                        </td>
+                                        <td>
+                                            <img src="img/icon_toast/icon_62.png" alt="">
+                                        </td>
+                                        <td>
+                                            <span>Storage <p class="numbers">0</p></span>
+                                        </td>
+                                        <td>
+                                            <img src="img/icon_toast/icon_64.png" alt="">
+                                        </td>
+                                        <td>
+                                            <span>Etc.<p class="numbers">0</p></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="box2">
+                            <div id="box2_mobile">
+                                <div id="box2_mobile_title">
+                                    <p>서버 자원</p>
+                                </div>
+                                <div class="container">
+                                    <div class="row align-items-center">
+                                        <div class="col-12 col-carousel">
+                                            <div class="owl-carousel carousel-main">
+                                                <div id="server" class="sources">
+                                                    <div id="server_left" class="sources_left">
+                                                        <img src="img/icon_toast/icon_58.png" alt="">
+                                                    </div>
+                                                    <div id="server_right" class="sources_right">
+                                                        <p>Server<br><span class="numbers">60</span></p>
+                                                    </div>
+                                                </div>
+                                                <div id="disk" class="sources">
+                                                    <div id="disk_left" class="sources_left">
+                                                        <img src="img/icon_toast/icon_59.png" alt="">
+                                                    </div>
+                                                    <div id="disk_right" class="sources_right">
+                                                        <p>Disk<br><span class="numbers">30</span></p>
+                                                    </div>
+                                                </div>
+                                                <div id="ip" class="sources">
+                                                    <div id="ip_left" class="sources_left">
+                                                        <img src="img/icon_toast/icon_60.png" alt="">
+                                                    </div>
+                                                    <div id="ip_right" class="sources_right">
+                                                        <p>IP<br><span class="numbers">1</span></p>
+                                                    </div>
+                                                </div>
+                                                <div id="cip" class="sources">
+                                                    <div id="cip_left" class="sources_left">
+                                                        <img src="img/icon_toast/icon_61.png" alt="">
+                                                    </div>
+                                                    <div id="cip_right" class="sources_right">
+                                                        <p>CIP<br><span class="numbers">1</span></p>
+                                                    </div>
+                                                </div>
+                                                <div id="snapshot" class="sources">
+                                                    <div id="snapshot_left" class="sources_left">
+                                                        <img src="img/icon_toast/icon_62.png" alt="">
+                                                    </div>
+                                                    <div id="snapshot_right" class="sources_right">
+                                                        <p>Snapshot<br><span class="numbers">1</span></p>
+                                                    </div>
+                                                </div>
+                                                <div id="image" class="sources">
+                                                    <div id="image_left" class="sources_left">
+                                                        <img src="img/icon_toast/icon_64.png" alt="">
+                                                    </div>
+                                                    <div id="image_right" class="sources_right">
+                                                        <p>Image<br><span class="numbers">1</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="box2_1">
+                                <p>서버 자원 <img src="img/cmp_point.png" alt=""></p>
+                            </div>
+                            <div id="box2_2">
+                                <div id="box2_2_top">
+                                    <div id="box2_2_1">
+                                        <div id="box2_left1">
+                                            <img src="img/icon_toast/icon_58.png" alt="">
+                                        </div>
+                                        <div id="box2_right1">
+                                            <p>Server<br><span class="numbers">60</span></p>
+                                        </div>
+                                    </div>
+                                    <div id="box2_2_2">
+                                        <div id="box2_left2">
+                                            <img src="img/icon_toast/icon_59.png" alt="">
+                                        </div>
+                                        <div id="box2_right2">
+                                            <p>Disk<br><span class="numbers">30</span></p>
+                                        </div>
+                                    </div>
+                                    <div id="box2_2_3">
+                                        <div id="box2_left3">
+                                            <img src="img/icon_toast/icon_60.png" alt="">
+                                        </div>
+                                        <div id="box2_right3">
+                                            <p>IP<br><span class="numbers">1</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="box2_2_bottom">
+                                    <div id="box2_2_4">
+                                        <div id="box2_left4">
+                                            <img src="img/icon_toast/icon_61.png" alt="">
+                                        </div>
+                                        <div id="box2_right4">
+                                            <p>CIP<br><span class="numbers">1</span></p>
+                                        </div>
+                                    </div>
+                                    <div id="box2_2_5">
+                                        <div id="box2_left5">
+                                            <img src="img/icon_toast/icon_62.png" alt="">
+                                        </div>
+                                        <div id="box2_right5">
+                                            <p>Snapshot<br><span class="numbers">1</span></p>
+                                        </div>
+                                    </div>
+                                    <div id="box2_2_6">
+                                        <div id="box2_left6">
+                                            <img src="img/icon_toast/icon_64.png" alt="">
+                                        </div>
+                                        <div id="box2_right6">
+                                            <p>Image<br><span class="numbers">1</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="grid2">
+                        <div id="box4">
+                            <div id="box4_1">
+                                <p>트래픽 <img src="img/cmp_point.png" alt=""></p>
+                                <div id="chart_btn">
+                                    <button id="btnAdd1">AWS 추가</button>
+                                    <button id="btnAdd2">NHN 추가</button>
+                                    <button id="btnAdd3">NaverCloud 추가</button>
+                                    <a href="20210126_darkmode1.html"><button id="F5">새로고침</button></a>
+                                </div>
+                            </div>
+                            <div id="chart_1">
+                                <div id="box4_2">
+                                    <div id="target">
+
+                                    </div>
+                                </div>
+                                <div id="box4_3">
+                                    <table>
+                                        <tr>
+                                            <td class="numbers">27<p class="noto">MB</p>
+                                            </td>
+                                            <td class="numbers">7297<p class="noto">MB</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>최저</td>
+                                            <td>최고</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="grid4">
+                        <div id="box3">
+                            <div id="box3_mobile">
+                                <div class="container">
+                                    <div class="row align-items-center">
+                                        <div class="col-12 col-carousel">
+                                            <div class="owl-carousel carousel-main">
+                                                <div id="top_account">
+                                                    <p>사용중인 계정</p>
+                                                    <div id="account" class="sources_big">
+                                                        <div id="box3_mobile_table">
+                                                            <div id="box3_mobile_tableWrap">
+                                                                <table>
+                                                                    <tr>
+                                                                        <td>nc10@ncloud24.com</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>ncasd10@ncloud24.com</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>nc10@ncloud24.com</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>nccvzxcv10@ncloud24.com</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>nc10@ncloud24.com</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="top_os">
+                                                    <p>OS</p>
+                                                    <div id="os" class="sources_big">
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <img src="img/icon_toast/icon_71.png" alt="">
+                                                                </td>
+                                                                <td>
+                                                                    <img src="img/icon_toast/icon_72.png" alt="">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Windows<p class="numbers">20</p>
+                                                                </td>
+                                                                <td>
+                                                                    Linux <p class="numbers">40</p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div id="top_loadbalancer">
+                                                    <p>로드밸런서</p>
+                                                    <div id="loadbalancer" class="sources_big">
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <img src="img/icon_toast/icon_73.png" alt="">
+                                                                </td>
+                                                                <td>
+                                                                    <img src="img/icon_toast/icon_74.png" alt="">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    로드밸런서 설정 <p class="numbers">0</p>
+                                                                </td>
+                                                                <td>
+                                                                    네트워크 전송량 <p class="numbers">0<span
+                                                                            class="noto">GB</span></p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="box3_1">
+                                <div id="box3_1_1">
+                                    <p>사용중인 계정 <img src="img/cmp_point.png" alt=""></p>
+                                </div>
+                                <div id="box3_1_2">
+                                    <div id="box3_table">
+                                        <div id="box3_tableWrap">
+                                            <table>
+                                                <tr>
+                                                    <td>nc10@ncloud24.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ncasd10@ncloud24.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>nc10@ncloud24.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>nccvzxcv10@ncloud24.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>nc10@ncloud24.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="box3_2">
+                                <div id="box3_2_1">
+                                    <p>OS <img src="img/cmp_point.png" alt=""></p>
+                                </div>
+                                <div id="box3_2_2">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <img src="img/icon_toast/icon_71.png" alt="">
+                                            </td>
+                                            <td>
+                                                <img src="img/icon_toast/icon_72.png" alt="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Windows<p class="numbers">20</p>
+                                            </td>
+                                            <td>
+                                                Linux <p class="numbers">40</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="box5">
+                                <div id="box5_1">
+                                    <p>로드밸런서 <img src="img/cmp_point.png" alt=""></p>
+                                </div>
+                                <div id="box5_2">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <img src="img/icon_toast/icon_73.png" alt="">
+                                            </td>
+                                            <td>
+                                                <img src="img/icon_toast/icon_74.png" alt="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                로드밸런서 설정 <p class="numbers">0</p>
+                                            </td>
+                                            <td>
+                                                네트워크전송량 <p class="numbers">0<span class="noto">GB</span></p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="grid3">
+                    <div id="box6">
+                        <div id="box6_1">
+                            <p>이번달 총 요금 <span>(2021.01)</span> <img src="img/cmp_point.png" alt=""></p>
+                        </div>
+                        <div id="box6_2">
+                            <p></p>
+                            <div id="box6_2_1">
+                                <p class="numbers"><span class="krw">&#8361;</span>518,856</p>
+                                <p>부가세 별도</p>
+                            </div>
+                        </div>
+                        <div id="box6_3">
+                            <p>3개월간 월별 요금 <img src="img/cmp_point.png" alt=""></p>
+                        </div>
+                        <div id="chart_2">
+                            <div id="box6_4">
+                                <div id="box6_4_1">
+                                    <figure class="highcharts-figure">
+                                        <div id="container"></div>
+                                        <p class="highcharts-description">
+
+                                        </p>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div id="box6_4_2"></div>
+                            <div id="box6_5">
+                                <table>
+                                    <tr>
+                                        <td>월별 평균 청구 금액</td>
+                                        <td>
+                                            <p class="numbers"><span class="krw">&#8361;</span>512,000</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>서비스별 최고 청구 금액</td>
+                                        <td>
+                                            <p class="numbers"><span class="krw">&#8361;</span>512,000</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        /* lnb */
+        (function ($) {
+
+            var lnbUI = {
+                click: function (target, speed) {
+                    var _self = this,
+                        $target = $(target);
+                    _self.speed = speed || 300;
+
+                    $target.each(function () {
+                        if (findChildren($(this))) {
+                            return;
+                        }
+                        $(this).addClass('noDepth');
+                    });
+
+                    function findChildren(obj) {
+                        return obj.find('> ul').length > 0;
+                    }
+
+                    $target.on('click', 'a', function (e) {
+                        e.stopPropagation();
+                        var $this = $(this),
+                            $depthTarget = $this.next(),
+                            $siblings = $this.parent().siblings();
+
+                        $this.parent('li').find('ul li').removeClass('on');
+                        $siblings.removeClass('on');
+                        $siblings.find('ul').slideUp(250);
+
+                        if ($depthTarget.css('display') == 'none') {
+                            _self.activeOn($this);
+                            $depthTarget.slideDown(_self.speed);
+                        } else {
+                            $depthTarget.slideUp(_self.speed);
+                            _self.activeOff($this);
+                        }
+
+                    })
+
+                },
+                activeOff: function ($target) {
+                    $target.parent().removeClass('on');
+                },
+                activeOn: function ($target) {
+                    $target.parent().addClass('on');
+                }
+            };
+
+            $('ul.tabs li').click(function () {
+                var tab_id = $(this).attr('data-tab');
+
+                $('ul.tabs li').removeClass('current');
+                $('.tab-content').removeClass('current');
+
+                $(this).addClass('current');
+                $("#" + tab_id).addClass('current');
+            });
+
+            $('#box2 .carousel-main').owlCarousel({
+                items: 2,
+                loop: false,
+                autoplay: false,
+                margin: 10,
+                nav: false,
+                dots: false,
+                navText: ['<span class="fas fa-chevron-left fa-2x"></span>',
+                    '<span class="fas fa-chevron-right fa-2x"></span>'
+                ],
+            });
+
+            $(window).resize(function () {
+                if ($(window).width() > 760) {
+                    $('#box2 .carousel-main').owlCarousel({
+                        items: 3,
+                        loop: false,
+                        autoplay: false,
+                        margin: 10,
+                        nav: false,
+                        dots: false,
+                        navText: ['<span class="fas fa-chevron-left fa-2x"></span>',
+                            '<span class="fas fa-chevron-right fa-2x"></span>'
+                        ],
+                    });
+                }
+            });
+
+            $('#box3 .carousel-main').owlCarousel({
+                items: 1,
+                loop: false,
+                autoplay: false,
+                margin: 5,
+                nav: true,
+                dots: false,
+                navText: ['<span class="fas fa-chevron-left fa-2x"></span>',
+                    '<span class="fas fa-chevron-right fa-2x"></span>'
+                ],
+            });
+
+            $('.menu-wrapper').on('click', function () {
+                $('.hamburger-menu').toggleClass('animate');
+            });
+
+            $('.menu-wrapper').on('click', function () {
+                $('#wrap_opacity').toggleClass('on');
+            });
+
+            // Call lnbUI
+            $(function () {
+                lnbUI.click('#lnb li', 300)
+            });
+            /*chart start*/
+
+            /*::::GREAT REFERENCE::::> http://jsfiddle.net/GeeksRock/xxbj12gL/*/
+            $(document).ready(function () {
+
+                var options = {
+                    title: {
+                        text: ''
+                    },
+                    chart: {
+                        renderTo: 'target',
+                        type: 'line'
+                    },
+                    xAxis: {
+                        categories: [
+                            '12/31', '1/1', '1/2', '1/3', '1/4', '1/5', '1/6'
+                        ],
+                        labels: {
+                            style: {
+                                // color:'#fff'
+                                /*꺾은선 chart x축 값 색*/
+                                color: '#000'
+                            }
+                        }
+                    },
+                    yAxis: {
+                        tickAmount: '4',
+                        /*꺾은선 가로 줄갯수*/
+                        title: {
+                            text: '',
+                            style: {
+                                fontSize: 'small'
+                            }
+                        },
+                        labels: {
+                            style: {
+                                // color:'#fff'
+                                /*꺾은선 chart y축 값 색*/
+                                color: '#000'
+                            }
+                        }
+                    },
+                    series: [{
+                        name: 'TOAST',
+                        data: [2000, 7297, 4432, 3680, 6882, 2643, 1019]
+                    }],
+                    categories: ['Sales Persons']
+                };
+
+                //adding a new series via a button click
+                $("#btnAdd1").on('click', function () {
+                    chart.addSeries({
+                        name: 'AWS',
+                        data: [2300, 597, 1132, 3380, 4582, 1743, 6019]
+                    });
+                    $(this).attr('disabled', true);
+                });
+
+                $("#btnAdd2").on('click', function () {
+                    chart.addSeries({
+                        name: 'NHN',
+                        data: [1000, 6257, 2653, 3261, 6432, 4321, 6434]
+                    });
+                    $(this).attr('disabled', true);
+                });
+                $("#btnAdd3").on('click', function () {
+                    chart.addSeries({
+                        name: 'Naver',
+                        data: [2600, 1697, 2232, 3640, 1535, 4574, 2466]
+                    });
+                    $(this).attr('disabled', true);
+                });
+
+
+                var chart = new Highcharts.Chart(options);
+            });
+
+            // Chart.defaults.global.elements.rectangle.backgroundColor = '#FF0000';
+
+            Highcharts.chart('container', {
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: ''
+                },
+                subtitle: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: [
+                        '2020.11',
+                        '2020.12',
+                        '2021.01'
+                    ],
+                    crosshair: true
+                },
+                yAxis: {
+                    tickAmount: 0,
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                },
+                tooltip: {
+                    headerFormat: '<span style="font-size:10px">{point.key}</span><table style="margin-bottom:50px;">',
+                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                        '<td style="padding:0"><b>{point.y:1f} 원</b></td></tr>',
+                    footerFormat: '</table>',
+                    shared: true,
+                    useHTML: true
+                },
+                plotOptions: {
+                    column: {
+                        pointPadding: 0.2,
+                        borderWidth: 0
+                    }
+                },
+                series: [{
+                    name: 'nc10@ncloud24.com',
+                    data: [40000, 90000, 80000]
+
+                }, {
+                    name: 'nc19@ncloud24.com',
+                    data: [70000, 120000, 130000]
+
+                }]
+            });
+            $('.support').click(function () {
+                $('#support').addClass('on');
+                $('#wrap_opacity_support').addClass('on');
+            })
+            $('#support_close').click(function () {
+                $('#support').removeClass('on');
+                $('#wrap_opacity_support').removeClass('on');
+            })
+
+        }(jQuery));
+    </script>
+</body>
+
+</html>
